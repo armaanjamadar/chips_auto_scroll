@@ -1,0 +1,74 @@
+{
+  "roots": [
+    "chips_auto_scroll_example"
+  ],
+  "packages": [
+    {
+      "name": "chips_auto_scroll_example",
+      "version": "1.0.0",
+      "dependencies": [
+        "chips_auto_scroll",
+        "flutter"
+      ],
+      "devDependencies": []
+    },
+    {
+      "name": "chips_auto_scroll",
+      "version": "0.0.1",
+      "dependencies": [
+        "cupertino_icons",
+        "flutter"
+      ]
+    },
+    {
+      "name": "flutter",
+      "version": "0.0.0",
+      "dependencies": [
+        "characters",
+        "collection",
+        "material_color_utilities",
+        "meta",
+        "sky_engine",
+        "vector_math"
+      ]
+    },
+    {
+      "name": "vector_math",
+      "version": "2.2.0",
+      "dependencies": []
+    },
+    {
+      "name": "sky_engine",
+      "version": "0.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "meta",
+      "version": "1.17.0",
+      "dependencies": []
+    },
+    {
+      "name": "material_color_utilities",
+      "version": "0.13.0",
+      "dependencies": [
+        "collection"
+      ]
+    },
+    {
+      "name": "collection",
+      "version": "1.19.1",
+      "dependencies": []
+    },
+    {
+      "name": "characters",
+      "version": "1.4.1",
+      "dependencies": []
+    },
+    {
+      "name": "cupertino_icons",
+      "version": "1.0.9",
+      "dependencies": []
+    }
+  ],
+  "configVersion": 1
+}
