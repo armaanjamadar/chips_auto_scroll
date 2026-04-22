@@ -1,7 +1,7 @@
 name: chips_auto_scroll
 description: A Flutter widget that automatically scrolls to the selected chip in a horizontal or vertical chip list. Supports any chip widget, customizable animations, and seamless lifecycle handling.
 version: 0.0.1
-homepage: https://github.com/yourusername/chips_auto_scroll
+homepage: https://github.com/armaanjamadar/chips_auto_scroll
 
 environment:
   sdk: ^3.11.4
