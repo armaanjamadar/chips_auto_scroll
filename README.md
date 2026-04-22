@@ -23,7 +23,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  chips_auto_scroll: ^0.0.1
+  chips_auto_scroll: ^0.0.2
 ```
 
 Then run:
@@ -34,7 +34,7 @@ flutter pub get
 
 ## Usage
 
-### Basic Horizontal Example
+### Horizontal Example
 
 ```dart
 import 'package:chips_auto_scroll/chips_auto_scroll.dart';
@@ -90,12 +90,21 @@ ChipsAutoScroll(
 )
 ```
 
-### Custom Padding and Physics
+### Custom Padding
 
 ```dart
 ChipsAutoScroll(
   selectedIndex: _selectedIndex,
   padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+  children: [...],
+)
+```
+
+### Custom Physics
+
+```dart
+ChipsAutoScroll(
+  selectedIndex: _selectedIndex,
   physics: const BouncingScrollPhysics(),
   children: [...],
 )
@@ -127,12 +136,6 @@ It works best for **small to medium lists** (up to ~50 items). For very large or
 ## How It Works
 
 `ChipsAutoScroll` uses a `ScrollController` and a `GlobalKey` per item to measure each chip's exact position in the scroll viewport. On init it uses `jumpTo` (instant, no flash) and on subsequent index changes it uses `animateTo` (smooth animation). Chips near the edges that cannot be centered are scrolled to the nearest boundary instead.
-
-## Roadmap
-
-- [ ] Builder pattern support (`itemBuilder` + `itemCount`) for larger lists
-- [ ] `onScrollComplete` callback
-- [ ] RTL support
 
 ## Contributing
 
