@@ -3,6 +3,6 @@
 ///
 /// Supports any chip widget, customizable animations, and seamless
 /// lifecycle handling for both horizontal and vertical scroll directions.
-library chips_auto_scroll;
+library;
 
 export 'src/chips_auto_scroll_widget.dart';

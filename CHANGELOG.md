@@ -1,6 +1,6 @@
-## 0.0.2
+## 0.0.3
 
-* Second release.
+* Third release.
 * `ChipsAutoScroll` widget with horizontal and vertical scroll support.
 * Auto-scroll to selected chip on init and on index change.
 * Supports any chip widget — `ChoiceChip`, `FilterChip`, `ActionChip`, or custom widgets.
