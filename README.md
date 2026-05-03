@@ -23,7 +23,7 @@ Add to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  chips_auto_scroll: ^0.0.2
+  chips_auto_scroll: ^0.0.3
 ```
 
 Then run:
