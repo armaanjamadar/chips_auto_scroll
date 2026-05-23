@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 /// A widget that displays a scrollable list of chips and automatically
@@ -73,9 +74,9 @@ class ChipsAutoScroll extends StatefulWidget {
     this.width,
     this.physics,
   }) : assert(
-          selectedIndex >= 0,
-          'selectedIndex must be >= 0',
-        );
+    selectedIndex >= 0,
+      'selectedIndex must be >= 0',
+    );
 
   @override
   State<ChipsAutoScroll> createState() => _ChipsAutoScrollState();
@@ -99,7 +100,7 @@ class _ChipsAutoScrollState extends State<ChipsAutoScroll> {
   void didUpdateWidget(covariant ChipsAutoScroll oldWidget) {
     super.didUpdateWidget(oldWidget);
 
-    if (oldWidget.children.length != widget.children.length) {
+    if (!listEquals(oldWidget.children, widget.children)) {
       _initKeys();
     }
 
@@ -183,19 +184,18 @@ class _ChipsAutoScrollState extends State<ChipsAutoScroll> {
 
   @override
   Widget build(BuildContext context) {
-    final list = ListView.builder(
+    final list = ListView(
       key: _listKey,
       controller: _controller,
       scrollDirection: widget.scrollDirection,
       physics: widget.physics ?? const ClampingScrollPhysics(),
       padding: widget.padding ?? _defaultPadding,
-      itemCount: widget.children.length,
-      itemBuilder: (context, index) {
+      children: widget.children.asMap().entries.map((entry) {
         return KeyedSubtree(
-          key: _keys[index],
-          child: widget.children[index],
+          key: _keys[entry.key],
+          child: entry.value,
         );
-      },
+      }).toList(),
     );
 
     if (widget.scrollDirection == Axis.horizontal) {

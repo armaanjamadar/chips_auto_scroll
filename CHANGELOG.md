@@ -1,4 +1,4 @@
-## 0.0.4
+## 0.0.5
 
 * `ChipsAutoScroll` widget with horizontal and vertical scroll support.
 * Auto-scroll to selected chip on init and on index change.
