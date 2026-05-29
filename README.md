@@ -143,4 +143,4 @@ Contributions are welcome! Please open an issue or submit a pull request on GitH
 
 ## License
 
-MIT
+Apache License 2.0
